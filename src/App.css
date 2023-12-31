@@ -1,3 +1,5 @@
+/* LOGIN-COMPONENT */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -9,7 +11,7 @@ body {
   text-align: center;
   padding: 16px;
   font-size: 15px;
-}
+} 
 
 .container {
   max-width: 500px; 
@@ -76,4 +78,57 @@ p.first-paragraph:first-of-type {
 .container h1:first-of-type {
   font-weight: normal;
   font-size: 23px;
+}
+
+/* ONBOARDING-COMPONENT */
+
+body, .on-boarding {
+  background: linear-gradient(124.23deg, rgba(162, 230, 250, 1) 10.66%, rgba(152, 204, 254, 1) 30.08%);
+}
+
+.on-boarding img{
+  width: 140px;
+  float:left;
+
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-container button{
+  width: 140px;
+  max-width: unset;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: 70px;
+}
+
+
+.body-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  font-size: 35px;
+  width:657px;
+  text-align:justify;
+ 
+}
+
+.body-text h2{
+ 
+  font-size:32px;
+  width:657px;
+  text-align:justify;
+  margin-top: 5px;
+  font-weight: normal;
+ }
+
+ .body-text button {
+  width: 140px;
+  height: 43px;
+  max-width: unset;
+  font-weight: normal;
+  margin-top: 20px; 
 }
