@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://finniu.localhost:3000",
-
-
   "dependencies": {
     "@apollo/client": "^3.8.8",
     "@apollo/server": "^4.9.5",
@@ -19,6 +17,7 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.1",
     "react-scripts": "^3.0.1",
+    "recharts": "^2.10.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -201,3 +201,10 @@ p.first-paragraph:first-of-type {
   
 }
  
+/* #curvecharm */
+.rentability{
+  font-size: 20px;
+  font-weight:normal;
+  text-align: start;
+  padding-left: 39px;
+}
