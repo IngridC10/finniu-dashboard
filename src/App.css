@@ -82,9 +82,9 @@ p.first-paragraph:first-of-type {
 
 /* ONBOARDING-COMPONENT */
 
-body, .on-boarding {
+/* body, .on-boarding {
   background: linear-gradient(124.23deg, rgba(162, 230, 250, 1) 10.66%, rgba(152, 204, 254, 1) 30.08%);
-}
+} */
 
 .on-boarding img{
   width: 140px;
@@ -131,4 +131,72 @@ body, .on-boarding {
   max-width: unset;
   font-weight: normal;
   margin-top: 20px; 
+}
+
+/* calendar */
+
+.react-calendar__tile {
+  width: 28px; /* Ancho de cada día */
+  height: 28px; /* Altura de cada día */
+  border-radius: 70%; /* Bordes circulares para cada día */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  color:
+  rgba(13, 58, 92, 1);
+  font-weight: normal;
+  border:1.78px solid rgba(13, 58, 92, 1);
+  text-transform: lowercase; 
+
+ /* Espacio entre los días */
+  /* Aplica bordes circulares */
+  /* Otros estilos que desees añadir */
+}
+.react-calendar {
+  max-width: 600px; /* Ancho máximo del calendario */
+}
+
+.react-calendar__month-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuir el espacio entre los días */
+}
+
+.react-calendar__month-view__days {
+  flex: 0 0 12%; /* Ancho de cada día */
+  margin-bottom: 10px; /* Espacio inferior entre las filas de días */
+}
+
+.custom-arrow {
+  background-color: yellow; /* Cambia el color de fondo de las flechas */
+  color: green; /* Cambia el color del texto de las flechas */
+  border-radius: 50%; /* Hace que las flechas tengan bordes redondeados */
+  width: 24px; /* Ancho de las flechas */
+  height: 24px; /* Altura de las flechas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+/* CHART */
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+.center-text {
+  position: absolute;
+  top: 45%;
+  left: 31%;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  width: 100px;
+}
+chart{
+  background-color: yellow;
 }
