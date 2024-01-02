@@ -2,7 +2,7 @@
   "name": "finniu-primeros",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://finniu.localhost:3000",
+  "proxy": "http://finniu.localhost:3000",
 
 
   "dependencies": {

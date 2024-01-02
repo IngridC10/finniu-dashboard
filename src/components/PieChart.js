@@ -11,11 +11,14 @@ const PieChart = () => {
   
     const options = {
       title: "Mi Historial",
-      pieHole: 0.87, // Para crear un donut chart
+      titleTextStyle: {
+        fontSize: 24, 
+      },
+      pieHole: 0.87, 
       slices: [
-        { color: '#A2E6FA' },  // Color para "1 Inversión en curso"
-        { color: '#0D3A5C'},  // Color para "2 Inversiones finalizadas"
-        { color: '#9381FF' },  // Color para "1 Inversión en proceso"
+        { color: '#A2E6FA' }, 
+        { color: '#0D3A5C'},  
+        { color: '#9381FF' },  
       ],
     };
   
@@ -29,7 +32,7 @@ const PieChart = () => {
           height={"400px"}
         />
 
-        <div className="center-text">Inversiones 4</div>
+         <div className="center-text">Inversiones 4</div>
       </div>
     );
   };
