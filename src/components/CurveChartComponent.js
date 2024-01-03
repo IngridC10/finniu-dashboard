@@ -50,7 +50,9 @@ const CurveChartComponent = () => {
           <YAxis tickFormatter={formatYAxis} /> 
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="value" stroke="#0D3A5C" strokeWidth={4} dot={{ fill: 'blue', stroke: '#A2E6FA', strokeWidth: 5, radius: 6 }} />
+          <Line type="monotone" dataKey="value" stroke="rgba(13, 58, 92, 1)" strokeWidth={8} strokeOpacity={0.25} />
+          <Line type="monotone" dataKey="value" stroke="rgba(13, 58, 92, 1)" strokeWidth={4} />
+        
         </LineChart>
       ) : (
         <BarChart data={data}>
