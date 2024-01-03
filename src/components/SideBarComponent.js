@@ -4,11 +4,14 @@ import LogoFinniu from '../images/LogoFinniu.png';
 import styled from 'styled-components';
 import { MdDashboard, MdHistory, MdEvent, MdExitToApp, MdMonetizationOn } from 'react-icons/md';
 
-
+const AppContainer = styled.div`
+  display: flex;
+  height: 100vh; /* Ocupa el 100% del viewport height */
+  background-color: rgba(245, 253, 255, 1);
+  `;
 const SidebarWrapper = styled.div`
   display: flex;
   height: 100%;
-
 
 `;
 
@@ -42,8 +45,9 @@ const SidebarImage = styled.img`
   margin-top: 10px;
 `;
 
-const SideBar = () => {
+const SideBarComponent = () => {
   return (
+<AppContainer>
     <SidebarWrapper>
       <Sidebar
         sidebar={
@@ -63,7 +67,7 @@ const SideBar = () => {
         open={true}
       />
     </SidebarWrapper>
-  );
+</AppContainer>);
 };
 
-export default SideBar;
+export default SideBarComponent;

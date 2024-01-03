@@ -10,32 +10,6 @@ const LOGIN_USER = gql(`
     }
   }
 `);
-const LoginComponent = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const [loginUser] = useMutation(LOGIN_USER);
-
-  const handleLogin = async () => {
-    try {
-      const { data: loginResponse } = await loginUser({
-        variables: { email, password },
-      });
-
-      if (loginResponse?.tokenAuth?.token) {
-        console.log('Inicio de sesión exitoso. Redirigiendo...');
-        
-      } else {
-        console.log('Credenciales incorrectas o usuario no encontrado');
-  
-      }
-    } catch (error) {
-      console.error('Error al iniciar sesión:', error);
-
-    }
-  };
-
-
 const LogoImage = styled.img`
   width: 190px;
   height: 90px;
@@ -56,6 +30,7 @@ const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(rgba(219, 247, 255, 1), rgba(255, 238, 221, 0));
 `;
 
 const LoginForm = styled.div`
@@ -102,6 +77,37 @@ const NoAccount = styled.p`
   font-size: 16px;
   margin-top: 8px;
 `;
+
+
+
+
+
+
+const LoginComponent = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const [loginUser] = useMutation(LOGIN_USER);
+
+  const handleLogin = async () => {
+    try {
+      const { data: loginResponse } = await loginUser({
+        variables: { email, password },
+      });
+
+      if (loginResponse?.tokenAuth?.token) {
+        console.log('Inicio de sesión exitoso. Redirigiendo...');
+        
+      } else {
+        console.log('Credenciales incorrectas o usuario no encontrado');
+  
+      }
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+
+    }
+  };
+
 
 
   return (

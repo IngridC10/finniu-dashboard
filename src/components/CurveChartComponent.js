@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const CurveChart = () => {
+
+const CurveChartComponent = () => {
   const [isLineChart, setIsLineChart] = useState(true); // Estado para el tipo de gráfico
 
   const data = [
-    { name: 'Enero', value: 10000 }, // Ejemplo de valores en soles
+    { name: 'Enero', value: 10000 }, 
     { name: 'Febrero', value: 20000 },
     { name: 'Marzo', value: 15000 },
     { name: 'Abril', value: 25000 },
@@ -14,17 +15,17 @@ const CurveChart = () => {
   ];
 
   const handleLineChart = () => {
-    setIsLineChart(true); // Cambia al gráfico de líneas
+    setIsLineChart(true); 
   };
 
   const handleBarChart = () => {
-    setIsLineChart(false); // Cambia al gráfico de barras
+    setIsLineChart(false); 
   };
 
-  // Función para formatear los números a formato de soles
   const formatYAxis = (value) => `S/ ${value}`;
 
   return (
+
     <ResponsiveContainer width="60%" height={400}>
       <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
         <h1 >Mi rentabilidad</h1>
@@ -43,27 +44,28 @@ const CurveChart = () => {
 
       {isLineChart ? (
         <LineChart data={data}>
-          {/* Configuración del gráfico de líneas */}
+      
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis tickFormatter={formatYAxis} /> {/* Formatear etiquetas del eje Y */}
+          <YAxis tickFormatter={formatYAxis} /> 
           <Tooltip />
           <Legend />
           <Line type="monotone" dataKey="value" stroke="#0D3A5C" strokeWidth={4} dot={{ fill: 'blue', stroke: '#A2E6FA', strokeWidth: 5, radius: 6 }} />
         </LineChart>
       ) : (
         <BarChart data={data}>
-          {/* Configuración del gráfico de barras */}
+   
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis tickFormatter={formatYAxis} /> {/* Formatear etiquetas del eje Y */}
+          <YAxis tickFormatter={formatYAxis} /> 
           <Tooltip />
           <Legend />
           <Bar dataKey="value" fill="#0D3A5C" />
         </BarChart>
       )}
     </ResponsiveContainer>
+  
   );
 };
 
-export default CurveChart;
+export default CurveChartComponent;

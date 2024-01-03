@@ -1,12 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import LogoFinniu from '../images/LogoFinniu.png';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(124.23deg, #A2E6FA 10.66%, #98CCFE 30.08%);
+  }
+`;
 
 const OnBoardingWrapper = styled.div`
   .on-boarding {
     header {
       display: flex;
       align-items: center;
+      padding:20px;
 
       img {
         width: 140px;
@@ -28,6 +37,7 @@ const OnBoardingWrapper = styled.div`
     }
 
     section {
+      padding:20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -66,6 +76,7 @@ const OnBoardingWrapper = styled.div`
 const OnBoardingComponent = () => {
   return (
     <OnBoardingWrapper>
+      <GlobalStyle/>
       <div className="on-boarding">
         <header>
           <img src={LogoFinniu} alt="Imagen de login" />

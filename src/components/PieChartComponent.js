@@ -1,7 +1,7 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 
-const PieChart = () => {
+const PieChartComponent = () => {
     const data = [
       ["Task", "Inversiones"],
       ["1 Inversión en curso", 20],
@@ -37,4 +37,4 @@ const PieChart = () => {
     );
   };
   
-  export default PieChart;
+  export default PieChartComponent;
