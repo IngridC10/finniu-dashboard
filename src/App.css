@@ -1,144 +1,27 @@
-/* LOGIN-COMPONENT */
 
-html, body {
+html,body {
   height: 100%;
   margin: 0;
   padding: 50px;
+  background-color:yellow
+
+
 }
 
 body {
-  background: linear-gradient(180deg, rgba(219, 247, 255, 1) 0%, rgba(255, 238, 221, 0) 100%);
   text-align: center;
   padding: 16px;
-  font-size: 15px;
-} 
-
-.container {
-  max-width: 500px; 
-  height: auto; 
-  background-color: white;
-  border-radius: 20px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.container > * {
-  margin-bottom: 20px;
-  width: 100%; 
-  box-sizing: border-box; 
-}
-
-input {
-  padding: 10px;
-  margin: 10px;
-  width: 60%; 
-  max-width: 300px; 
-  height: 43px;
-  border-radius: 26px;
-  border: 1.9px solid rgba(162, 230, 250, 1);
-}
-
-button {
-  width: auto; 
-  max-width: 120px; 
-  height: 30px;
-  color: white;
-  border-radius: 20px;
-  background-color: rgba(13, 58, 92, 1);
-  font-weight: bold;
-}
-button svg {
-  font-size: 1.4em; /* Ajusta el tamaño del ícono */
-  vertical-align: middle; /* Centra verticalmente el ícono */
-  margin-left:8px;
-}
-
-img {
-  width: 70%;
-  max-width: 200px; 
-}
-
-p.first-paragraph:first-of-type {
-  margin-left: auto;
-  margin-right: -35px;
-  max-width: 80%;
-  font-size: 10px;
-  margin-top: -11px;
-}
-
-
-.second-paragraph {
-  margin-top:-10px;
-}
-
-.container h1:first-of-type {
-  font-weight: normal;
-  font-size: 23px;
-}
-
-/* ONBOARDING-COMPONENT */
-
-/* body, .on-boarding {
-  background: linear-gradient(124.23deg, rgba(162, 230, 250, 1) 10.66%, rgba(152, 204, 254, 1) 30.08%);
-} */
-
-.on-boarding img{
-  width: 140px;
-  float:left;
 
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
-}
-
-.header-container button{
-  width: 140px;
-  max-width: unset;
-  font-weight: normal;
-  margin-left: auto;
-  margin-right: 70px;
-}
 
 
-.body-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  font-size: 35px;
-  width:657px;
-  text-align:justify;
- 
-}
-
-.body-text h2{
- 
-  font-size:32px;
-  width:657px;
-  text-align:justify;
-  margin-top: 5px;
-  font-weight: normal;
- }
-
- .body-text button {
-  width: 140px;
-  height: 43px;
-  max-width: unset;
-  font-weight: normal;
-  margin-top: 20px; 
-}
-
-/* calendar */
+/* CALENDAR */
 
 .react-calendar__tile {
-  width: 28px; /* Ancho de cada día */
-  height: 28px; /* Altura de cada día */
-  border-radius: 70%; /* Bordes circulares para cada día */
+  width: 28px; 
+  height: 28px; 
+  border-radius: 70%; 
   background-color: white;
   display: flex;
   align-items: center;
@@ -150,12 +33,9 @@ p.first-paragraph:first-of-type {
   border:1.78px solid rgba(13, 58, 92, 1);
   text-transform: lowercase; 
 
- /* Espacio entre los días */
-  /* Aplica bordes circulares */
-  /* Otros estilos que desees añadir */
 }
 .react-calendar {
-  max-width: 600px; /* Ancho máximo del calendario */
+  max-width: 600px; 
 }
 
 .react-calendar__month-view {
@@ -165,7 +45,7 @@ p.first-paragraph:first-of-type {
 }
 
 .react-calendar__month-view__days {
-  flex: 0 0 12%; /* Ancho de cada día */
+  flex: 0 0 12%; 
   margin-bottom: 10px; /* Espacio inferior entre las filas de días */
 }
 
@@ -182,41 +62,18 @@ p.first-paragraph:first-of-type {
 }
 
 
-/* CHART */
-.chart-container{
-  position: relative;
-  width: 100%;
 
 
-}
-
-.center-text {
-  position: absolute;
-  top: 45%;
-  left: 31%;
-  text-align: center;
-  font-size: 24px;
-  color: #000;
-  width: 100px;
-  
-}
- 
-/* #curvecharm */
-.rentability{
-  font-size: 20px;
-  font-weight:normal;
-  text-align: start;
-  padding-left: 39px;
-}
-
-.button-container{
-  display: flex;
-  gap: 20px; 
+/* SIDEBAR: es necesario porque se repite el mismo estilo para la li*/
+.sidebar-content li {   
+  text-align: left;
+  margin: 25px;
+  padding: 8px;
 
 }
 
-.chart{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* BOTONES */
+button{
+  background-color: rgba(13, 58, 92, 1);
+  color:white;
 }

@@ -23,7 +23,7 @@ const PieChart = () => {
     };
   
     return (
-      <div className="chart-container">
+      <div style={{position:'relative',width:'100%'}}>
         <Chart
           chartType="PieChart"
           data={data}
@@ -32,7 +32,7 @@ const PieChart = () => {
           height={"400px"}
         />
 
-         <div className="center-text">Inversiones 4</div>
+         <div style={{position:'absolute',top:'45%',left:'31%',textAlign:'center',fontSize:'24px',color:'black',width:'100px'}}>Inversiones 4</div>
       </div>
     );
   };

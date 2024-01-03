@@ -26,7 +26,7 @@ const CurveChart = () => {
 
   return (
     <ResponsiveContainer width="60%" height={400}>
-      <div className="chart">
+      <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
         <h1 >Mi rentabilidad</h1>
         <select >
           <option>Meses</option>
@@ -35,7 +35,7 @@ const CurveChart = () => {
       
         </select>
 
-        <div className='button-container'>
+        <div style={{display:'flex',gap:'20px'}}className='button-container'>
           <button onClick={handleLineChart}>G.Líneas</button>
           <button onClick={handleBarChart}>G.Barras</button>
         </div>

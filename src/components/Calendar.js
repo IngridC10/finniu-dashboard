@@ -19,7 +19,6 @@ function CustomCalendar() {
       );
     }
   };
-
   return (
     <div>
       <h1>Calendario</h1>
@@ -27,8 +26,7 @@ function CustomCalendar() {
         className="custom-calendar"
         onChange={onChange}
         value={date}
-        prev2Label={<div className="custom-arrow">&#x25C4;</div>}
-        next2Label={<div className="custom-arrow">&#x25BA;</div>} // Utiliza la función para personalizar las flechas
+        tileDisabled={tileDisabled} // Utiliza la función para personalizar las flechas
       />
       <p>Fecha seleccionada: {date.toDateString()}</p>
     </div>
