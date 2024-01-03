@@ -1,19 +1,84 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 import LogoFinniu from '../images/LogoFinniu.png';
+
+const OnBoardingWrapper = styled.div`
+  .on-boarding {
+    header {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 140px;
+        float: left;
+      }
+
+      button {
+        width: 140px;
+        max-width: unset;
+        height: 35px;
+        font-weight: normal;
+        margin-left: auto;
+        margin-right: 70px;
+        border-radius: 20px;
+        background-color: rgba(13, 58, 92, 1);
+        color:white;
+
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 35px;
+      width: 657px;
+      text-align: justify;
+
+      h1 {
+        color: rgba(13, 58, 92, 1);
+        width: 550px;
+      }
+
+      h2 {
+        font-size: 32px;
+        width: 550px;
+        text-align: justify;
+        margin-top: 5px;
+        font-weight: normal;
+      }
+
+      button {
+        width: 140px;
+        height: 43px;
+        max-width: unset;
+        font-weight: normal;
+        margin-top: 20px;
+        border-radius: 20px;
+        color:white;
+        background: rgba(13, 58, 92, 1);
+
+      }
+    }
+  }
+`;
+
 const OnBoardingComponent = () => {
   return (
-    <div className="on-boarding">
-      <header style={{display:'flex',alignItems:'center'}}>
-        <img style={{width:'140px',float:'left'}}src={LogoFinniu} alt="Imagen de login" />
-        <button    style={{width:'140px',maxWidth:'unset',height:'35px',fontWeight:'normal',marginLeft:'auto',marginRight:'70px',borderRadius:'20px'}}>Iniciar Sesión</button>
-      </header>
-      <section style={{display:'flex',flexDirection:'column',alignItems:'flex-start',fontSize:'35px',width:'657px',textAlign:'justify'}} >
-        <h1 style={{color:'rgba(13, 58, 92, 1)',width:'550px'}}>Somos tu aliado para un futuro financiero estable</h1>
-        <h2 style={{fontSize:'32px',width:'550px',textAlign:'justify',marginTop:'5px',fontWeight:'normal'}}>Brindamos soluciones financieras con una asesoría personalizada</h2>
-        <button style={{width:'140px',height:'43px',maxWidth:'unset',fontWeight:'normal',marginTop:'20px',borderRadius:'20px'}}> Quiero Conversar</button>
-      </section>
-    </div>
+    <OnBoardingWrapper>
+      <div className="on-boarding">
+        <header>
+          <img src={LogoFinniu} alt="Imagen de login" />
+          <button>Iniciar Sesión</button>
+        </header>
+        <section>
+          <h1>Somos tu aliado para un futuro financiero estable</h1>
+          <h2>Brindamos soluciones financieras con una asesoría personalizada</h2>
+          <button>Quiero Conversar</button>
+        </section>
+      </div>
+    </OnBoardingWrapper>
   );
-}
+};
 
-export default OnBoardingComponent
+export default OnBoardingComponent;

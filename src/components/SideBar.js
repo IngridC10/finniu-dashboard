@@ -1,31 +1,68 @@
 import React from 'react';
 import Sidebar from 'react-sidebar';
 import LogoFinniu from '../images/LogoFinniu.png';
+import styled from 'styled-components';
+import { MdDashboard, MdHistory, MdEvent, MdExitToApp, MdMonetizationOn } from 'react-icons/md';
 
 
-import { MdDashboard,MdHistory, MdEvent, MdExitToApp, MdMonetizationOn } from 'react-icons/md'; // Importa los íconos de Material Icons
+const SidebarWrapper = styled.div`
+  display: flex;
+  height: 100%;
+
+
+`;
+
+const SidebarContent = styled.div`
+  .sidebar-content {
+    ul {
+      list-style: none;
+      padding: 10px;
+      margin-top:-25px;
+     
+
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+`;
+
+const SidebarImage = styled.img`
+  width: 100px;
+  height: 50px;
+  padding: 40px;
+  margin-top: 10px;
+`;
 
 const SideBar = () => {
   return (
-    <div style={{display:'flex',height:'100%'}}> {/* Contenedor principal */}
+    <SidebarWrapper>
       <Sidebar
         sidebar={
-          <div className='sidebar-wrapper'>
+          <SidebarContent>
             <div className="sidebar-content">
-              <img style={{width:'90px',height:'45px',padding:'20px'}} src={LogoFinniu} alt="Imagen de sidebar" /> {/* La imagen dentro del sidebar */}
-              <ul style={{listStyle:'none',padding:'10px',marginBottom:'50px'}}>
-                <li ><MdDashboard /> Mi Dashboard</li>
+              <SidebarImage src={LogoFinniu} alt="Imagen de sidebar" />
+              <ul>
+                <li><MdDashboard /> Mi Dashboard</li>
                 <li><MdMonetizationOn /> Mis Inversiones</li>
                 <li><MdHistory /> Mi Historial</li>
                 <li><MdEvent /> Mi Calendario</li>
                 <li><MdExitToApp /> Cerrar Sesión</li>
               </ul>
             </div>
-          </div>
+          </SidebarContent>
         }
         open={true}
       />
-    </div>
+    </SidebarWrapper>
   );
 };
 

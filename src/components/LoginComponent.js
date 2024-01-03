@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation, gql } from '@apollo/client';
 import LogoFinniu from '../images/LogoFinniu.png';
+import styled from 'styled-components';
 
 const LOGIN_USER = gql(`
   mutation TokenAuth($email: String!, $password: String!) {
@@ -34,78 +35,104 @@ const LoginComponent = () => {
     }
   };
 
+
+const LogoImage = styled.img`
+  width: 190px;
+  height: 90px;
+`;
+
+const Title = styled.h1`
+  font-size: 22px;
+  font-weight: normal;
+  width: 340px;
+  height: 42px;
+  margin-bottom: 3px;
+  padding-bottom:20px;
+`;
+const LoginContainer = styled.div`
+  padding: 20px;
+  height: 100vh; 
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LoginForm = styled.div`
+  width: 90%; /* Ancho del formulario */
+  max-width: 400px; /* Máximo ancho del formulario */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: white;
+
+`;
+
+const LoginInput = styled.input`
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 23px;
+  border-radius: 26px;
+  border: 1.9px solid rgba(162, 230, 250, 1);
+`;
+
+const LoginButton = styled.button`
+  width: 100px;
+  height: 30px;
+  color: white;
+  border-radius: 20px;
+  background-color: rgba(13, 58, 92, 1);
+  font-weight: bold;
+`;
+
+const ForgotPassword = styled.p`
+margin-left: auto; 
+margin-right: 40px; 
+max-width: 80%;
+font-size: 10px;
+margin-top: -10px;
+text-align: right; 
+`;
+
+const NoAccount = styled.p`
+  font-size: 16px;
+  margin-top: 8px;
+`;
+
+
   return (
-  <div style={{ padding: '20px', width:"100%",boxSizing:'border-box'}}>
-    <div style={{ maxWidth: '500px',
-    height: '400px',
-    borderRadius: '20px',
-    margin: '0 auto',
-    display: 'flex',
-    background: 'white',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px'
-  }}>
-    <img src={LogoFinniu} alt="Imagen de login" style={{ width: '200px',height: "90px" }} />
-    <h1 style={{fontSize:'22px',fontWeight:'normal',width:'340px',height:'42px',  marginBottom: '3px',}}>Hola, ingresa a tu cuenta</h1>
-    <input
-      type="text"
-      placeholder="Correo electrónico"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      style={{
-        padding: '10px',
-        marginBottom: '20px',
-        width: '100%',
-        maxWidth: '300px',
-        height: '23px',
-        borderRadius: '26px',
-        border: '1.9px solid rgba(162, 230, 250, 1)',
-      }}
-    />
-    <input
-      type="password"
-      placeholder="Contraseña"
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      style={{
-        padding: '10px',
-        width: '100%',
-        maxWidth: '300px',
-        height: '23px',
-        borderRadius: '26px',
-        border: '1.9px solid rgba(162, 230, 250, 1)',
-      }}
-    />
-       <p style={{
-        marginLeft: 'auto',
-        marginRight: '90px',
-        maxWidth: '80%',
-        fontSize: '10px',
-        marginTop: '8px'
-      }}>
-        ¿Olvidaste tu contraseña?
-      </p>
-     <button type="button" onClick={handleLogin}
-      style={{
-        width: '110px',
-        height: '30px',
-        color: 'white',
-        borderRadius: '20px',
-        backgroundColor: 'rgba(13, 58, 92, 1)',
-        fontWeight: 'bold',
-      }}
-    >
-      Entrar
-    </button>
-    <p style={{
-      marginBottom: '10px' // Asegúrate de que el valor esté entre comillas
-      }}>¿Aún no tienes una cuenta?
-    </p>
-  </div>
-</div>
-);
+    <LoginContainer>
+      <LoginForm>
+       <LogoImage src={LogoFinniu} alt="Imagen de login" />
+       <Title>Hola, ingresa a tu cuenta</Title>
+       <LoginInput
+          type="text"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <LoginInput
+          type="text"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <ForgotPassword>
+          ¿Olvidaste tu contraseña?
+        </ForgotPassword>
+        <LoginButton type="button" onClick={handleLogin}>
+          Entrar
+        </LoginButton>
+        <NoAccount>
+          ¿Aún no tienes una cuenta?
+        </NoAccount>
+      </LoginForm>
+    </LoginContainer>
+  );
 };
 
 export default LoginComponent;

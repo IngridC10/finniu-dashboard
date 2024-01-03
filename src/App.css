@@ -2,15 +2,14 @@
 html,body {
   height: 100%;
   margin: 0;
-  padding: 50px;
-  background-color:yellow
-
+  background-image: linear-gradient(180deg, rgba(219, 247, 255, 1), rgba(255, 238, 221, 0));
 
 }
 
 body {
   text-align: center;
   padding: 16px;
+
 
 }
 
@@ -41,20 +40,20 @@ body {
 .react-calendar__month-view {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribuir el espacio entre los días */
+  justify-content: space-between;
 }
 
 .react-calendar__month-view__days {
   flex: 0 0 12%; 
-  margin-bottom: 10px; /* Espacio inferior entre las filas de días */
+  margin-bottom: 10px;
 }
 
 .custom-arrow {
-  background-color: yellow; /* Cambia el color de fondo de las flechas */
-  color: green; /* Cambia el color del texto de las flechas */
-  border-radius: 50%; /* Hace que las flechas tengan bordes redondeados */
-  width: 24px; /* Ancho de las flechas */
-  height: 24px; /* Altura de las flechas */
+  background-color: yellow; 
+  color: green; 
+  border-radius: 50%; 
+  width: 24px; 
+  height: 24px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,18 +61,3 @@ body {
 }
 
 
-
-
-/* SIDEBAR: es necesario porque se repite el mismo estilo para la li*/
-.sidebar-content li {   
-  text-align: left;
-  margin: 25px;
-  padding: 8px;
-
-}
-
-/* BOTONES */
-button{
-  background-color: rgba(13, 58, 92, 1);
-  color:white;
-}
