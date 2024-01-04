@@ -6,7 +6,7 @@ const CurveChartComponent = () => {
   const [isLineChart, setIsLineChart] = useState(true); // Estado para el tipo de gráfico
 
   const data = [
-    { name: 'Enero', value: 10000 }, 
+    { name: 'Febrero', value: 10000 }, 
     { name: 'Febrero', value: 20000 },
     { name: 'Marzo', value: 15000 },
     { name: 'Abril', value: 25000 },
