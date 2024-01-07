@@ -57,6 +57,7 @@ const LoginComponentStyled = styled.div`
     height: 60px;
     border-radius: 26px;
     border: 1.9px solid rgba(162, 230, 250, 1);
+    argin-top: 35px;
   }
   .login h2 {
     font-size: 16px;
@@ -93,7 +94,9 @@ const LoginComponentStyled = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-left: 25px;
   }
 `;
 
