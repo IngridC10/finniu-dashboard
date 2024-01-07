@@ -1,38 +1,37 @@
-
-html,body {
+html,
+body {
   height: 100%;
-  margin: 0;
+  text-align: center;
   /* background-color: rgba(245, 253, 255, 1); */
-
 }
 
-body {
-  text-align: center;
+#root {
+  height: 100%;
+}
+.App {
+  height: 100%;
 }
 
 /* CALENDAR */
 
 .react-calendar__tile {
-
-  width: 28px; 
-  height: 28px; 
-  border-radius: 70%; 
+  width: 28px;
+  height: 28px;
+  border-radius: 70%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  color:
-  rgba(13, 58, 92, 1);
+  color: rgba(13, 58, 92, 1);
   font-weight: normal;
-  border:1.78px solid rgba(13, 58, 92, 1);
-  text-transform: lowercase; 
-
+  border: 1.78px solid rgba(13, 58, 92, 1);
+  text-transform: lowercase;
 }
 .react-calendar {
-  max-width: 700px; 
-  
-  margin:20px;
+  max-width: 700px;
+
+  margin: 20px;
 }
 
 .react-calendar__month-view {
@@ -42,20 +41,18 @@ body {
 }
 
 .react-calendar__month-view__days {
-  flex: 0 0 12%; 
+  flex: 0 0 12%;
   margin-bottom: 10px;
 }
 
 .custom-arrow {
-  background-color: yellow; 
-  color: green; 
-  border-radius: 50%; 
-  width: 24px; 
-  height: 24px; 
+  background-color: yellow;
+  color: green;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-
