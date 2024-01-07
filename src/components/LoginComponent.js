@@ -45,12 +45,16 @@ const LoginComponentStyled = styled.div`
     font-weight: normal;
   }
 
+  input {
+    fontsize: 22px;
+  }
+
   .login input {
     margin: 15px;
     align-self: center;
-    padding-left: 20px;
+    padding-left: 22px;
     width: 498px;
-    height: 45px;
+    height: 60px;
     border-radius: 26px;
     border: 1.9px solid rgba(162, 230, 250, 1);
   }
@@ -134,6 +138,7 @@ const LoginComponent = () => {
           <img src={LogoFinniu} alt="logo" />
           <h1>Hola, ingresa a tu cuenta</h1>
           <input
+            style={{ fontSize: "20px" }}
             type="text"
             placeholder="Correo electrónico"
             value={email}
@@ -141,6 +146,7 @@ const LoginComponent = () => {
           />
           <div className="password">
             <input
+              style={{ fontSize: "20px" }}
               type={showPassword ? "text" : "password"}
               placeholder="Contraseña"
               value={password}
