@@ -57,8 +57,15 @@ const SideBarComponent = () => {
             src={LogoFinniu}
             alt="logo"
           />
-          <button onClick={handleExpandCollapse}>
-            {isExpanded ? "Colapsar" : "Expandir"}
+          <button
+            style={{
+              marginTop: "29px",
+              marginLeft: "40px",
+              marginBottom: "30px",
+            }}
+            onClick={handleExpandCollapse}
+          >
+            {isExpanded ? "collapse" : "expand"}
           </button>
           {isExpanded && (
             <>
