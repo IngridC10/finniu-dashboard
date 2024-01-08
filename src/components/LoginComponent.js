@@ -69,7 +69,7 @@ const LoginComponentStyled = styled.div`
     height: 60px;
     border-radius: 26px;
     border: 1.9px solid rgba(162, 230, 250, 1);
-    argin-top: 35px;
+    margin-top: 35px;
   }
   .login h2 {
     font-size: 16px;
@@ -182,10 +182,11 @@ const LoginComponent = () => {
                   float: "left",
                   marginLeft: "-78px",
                   marginBottom: "-4px",
+                  paddingTop: "25px",
                   width: "25px",
                   height: "30px",
                 }}
-                icon={showPassword ? faEyeSlash : faEye}
+                icon={showPassword ? faEye : faEyeSlash}
                 onClick={togglePasswordVisibility}
               />
             </div>

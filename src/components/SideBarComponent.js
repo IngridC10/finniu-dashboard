@@ -1,10 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 import LogoFinniu from "../images/LogoFinniu.png";
 import Calendar from "../images/calendar.png";
 import Dollar from "../images/dollar-circle.png";
 import SignOut from "../images/sign-out.png";
 import Graph from "../images/graph.png";
+import React, { useState } from "react";
 
 const SideBarComponentStyled = styled.div`
   &.bodyNavbar {
@@ -30,9 +30,24 @@ const SideBarComponentStyled = styled.div`
     height: 32px;
     justify-content: flex-end;
   }
+
+  .navBarContainer {
+    width: 80px;
+    transition: width 0.3s ease;
+  }
+
+  .navBarContainer.expanded {
+    width: 200px;
+  }
 `;
 
 const SideBarComponent = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpandCollapse = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <SideBarComponentStyled className="bodyNavbar">
       <div className="container">
@@ -42,10 +57,17 @@ const SideBarComponent = () => {
             src={LogoFinniu}
             alt="logo"
           />
-          <img src={Dollar} alt="dollar" />
-          <img src={Graph} alt="graph" />
-          <img src={Calendar} alt="calendar" />
-          <img src={SignOut} alt="signout" />
+          <button onClick={handleExpandCollapse}>
+            {isExpanded ? "Colapsar" : "Expandir"}
+          </button>
+          {isExpanded && (
+            <>
+              <img src={Dollar} alt="dollar" />
+              <img src={Graph} alt="graph" />
+              <img src={Calendar} alt="calendar" />
+              <img src={SignOut} alt="signout" />
+            </>
+          )}
         </div>
       </div>
     </SideBarComponentStyled>
