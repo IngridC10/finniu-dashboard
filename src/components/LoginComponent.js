@@ -16,17 +16,6 @@ const LoginComponentStyled = styled.div`
     justify-content: center;
     align-items: center;
 
-    
-    @media (max-width: 375px) {
-       .container{
-        width:345px;  
-       }
-        h1{
-        font-size:10px;
-       }
-
-    }
-  }
 
   .container {
     margin: auto;
@@ -60,6 +49,8 @@ const LoginComponentStyled = styled.div`
   input {
     font-size: 22px;
   }
+
+ 
 
   .login input {
     margin: 15px;
@@ -118,7 +109,10 @@ const LoginComponentStyled = styled.div`
     font-size: 20px;
     width: 16px;
     height: 18px;
+  
   }
+ 
+
 `;
 
 const LOGIN_USER = gql`
