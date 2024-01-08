@@ -5,7 +5,7 @@ const InprogressInvestmentReportStyled = styled.div`
   .investmentReport {
     margin: 20px;
     border-radius: 30px;
-    background-color: rgba(219, 247, 255, 1);
+    background: #dbf7ff;
     padding: 30px;
   }
   .bodyReport {
@@ -13,18 +13,27 @@ const InprogressInvestmentReportStyled = styled.div`
     height: 263px;
     align-items: center;
     color: rgba(13, 58, 92, 1);
-    font-weight: bold;
     font-size: 24px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 1fr;
   }
+
   .bodyReportColumn1 {
     font-size: 36px;
     font-weight: bold;
   }
   .bodyReportRow {
     text-align: left;
-    font-size: 18px;
+    font-size: 24px;
+  }
+  .bodyReportRow h1 {
+    font-weight: normal;
+  }
+  .line {
+    height: 180px;
+    border-right: 5px solid;
+    color: #a2e6fa;
+    width: 40px;
   }
 `;
 
@@ -52,7 +61,7 @@ const InprogressInvestmentReport = () => {
           </div>
 
           <div className="bodyReportColumn2">
-            <p>linea</p>
+            <div className="line"></div>
           </div>
 
           <div className="bodyReportColumn3">
@@ -63,7 +72,7 @@ const InprogressInvestmentReport = () => {
                 fontWeight: "normal",
               }}
             >
-              <p>Total de intereses generados</p>
+              <p>Total intereses generados</p>
             </div>
             <div
               style={{
