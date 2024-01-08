@@ -1,73 +1,55 @@
-import React from 'react';
-import Sidebar from 'react-sidebar';
-import LogoFinniu from '../images/LogoFinniu.png';
-import styled from 'styled-components';
-import { MdDashboard, MdHistory, MdEvent, MdExitToApp, MdMonetizationOn } from 'react-icons/md';
+import React from "react";
+import styled from "styled-components";
+import LogoFinniu from "../images/LogoFinniu.png";
+import Calendar from "../images/calendar.png";
+import Dollar from "../images/dollar-circle.png";
+import SignOut from "../images/sign-out.png";
+import Graph from "../images/graph.png";
 
-const AppContainer = styled.div`
-  display: flex;
-  height: 100vh; /* Ocupa el 100% del viewport height */
-  background-color: rgba(245, 253, 255, 1);
-  `;
-const SidebarWrapper = styled.div`
-  display: flex;
-  height: 100%;
-
-`;
-
-const SidebarContent = styled.div`
-  .sidebar-content {
-    ul {
-      list-style: none;
-      padding: 10px;
-      margin-top:-25px;
-     
-
-
-      li {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        
-
-        svg {
-          margin-right: 10px;
-        }
-      }
-    }
+const SideBarComponentStyled = styled.div`
+  &.bodyNavbar {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
   }
-`;
 
-const SidebarImage = styled.img`
-  width: 100px;
-  height: 50px;
-  padding: 40px;
-  margin-top: 10px;
+  .navBarContainer {
+    width: 90px;
+    height: 980px;
+    background-color: #dbf7ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBarContainer img {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 32px;
+    height: 32px;
+    justify-content: flex-end;
+  }
 `;
 
 const SideBarComponent = () => {
   return (
-<AppContainer>
-    <SidebarWrapper>
-      <Sidebar
-        sidebar={
-          <SidebarContent>
-            <div className="sidebar-content">
-              <SidebarImage src={LogoFinniu} alt="Imagen de sidebar" />
-              <ul>
-                <li><MdDashboard /> Mi Dashboard</li>
-                <li><MdMonetizationOn /> Mis Inversiones</li>
-                <li><MdHistory /> Mi Historial</li>
-                <li><MdEvent /> Mi Calendario</li>
-                <li><MdExitToApp /> Cerrar Sesión</li>
-              </ul>
-            </div>
-          </SidebarContent>
-        }
-        open={true}
-      />
-    </SidebarWrapper>
-</AppContainer>);
+    <SideBarComponentStyled className="bodyNavbar">
+      <div className="container">
+        <div className="navBarContainer">
+          <img
+            style={{ width: "156px", marginLeft: "80px", height: "78px" }}
+            src={LogoFinniu}
+            alt="logo"
+          />
+          <img src={Dollar} alt="dollar" />
+          <img src={Graph} alt="graph" />
+          <img src={Calendar} alt="calendar" />
+          <img src={SignOut} alt="signout" />
+        </div>
+      </div>
+    </SideBarComponentStyled>
+  );
 };
 
 export default SideBarComponent;

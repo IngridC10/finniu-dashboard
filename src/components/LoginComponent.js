@@ -15,7 +15,19 @@ const LoginComponentStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    
+    @media (max-width: 375px) {
+       .container{
+        width:345px;  
+       }
+        h1{
+        font-size:10px;
+       }
+
+    }
   }
+
   .container {
     margin: auto;
     width: 835px;
@@ -26,7 +38,7 @@ const LoginComponentStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+
 
   .login {
     display: flex;
@@ -37,7 +49,7 @@ const LoginComponentStyled = styled.div`
     width: 261px;
     height: 127px;
     align-self: center;
-    margin-button: 15px;
+    margin-bottom: 15px;
   }
 
   .login h1 {
@@ -46,7 +58,7 @@ const LoginComponentStyled = styled.div`
   }
 
   input {
-    fontsize: 22px;
+    font-size: 22px;
   }
 
   .login input {
@@ -89,7 +101,7 @@ const LoginComponentStyled = styled.div`
   }
 
   .savePasswordSection {
-    gap: 2%;
+    gap: 3%;
     font-size: 16px;
     display: flex;
     flex-direction: row;
@@ -97,6 +109,15 @@ const LoginComponentStyled = styled.div`
     justify-content: flex-start;
     margin-bottom: 20px;
     margin-left: 25px;
+  }
+
+  span {
+    color: white;
+    border: 2px solid black;
+    border-radius: 13%;
+    font-size: 20px;
+    width: 16px;
+    height: 18px;
   }
 `;
 
@@ -172,7 +193,9 @@ const LoginComponent = () => {
 
           <h2>¿Olvidaste tu contraseña?</h2>
           <div className="savePasswordSection">
-            <FontAwesomeIcon icon={faSquare} style={{ background: "white" }} />{" "}
+            <span>
+              <FontAwesomeIcon icon={faSquare} />
+            </span>
             <p>Guardar mis credenciales para los futuros ingresos</p>
           </div>
           <button onClick={handleLogin}>Entrar</button>
