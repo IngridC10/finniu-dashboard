@@ -2,7 +2,16 @@ html,
 body {
   height: 100%;
   text-align: center;
+
   /* background-color: rgba(245, 253, 255, 1); */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }
 
 #root {
