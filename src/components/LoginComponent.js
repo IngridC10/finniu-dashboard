@@ -49,6 +49,7 @@ const LoginComponentStyled = styled.div`
     @media (max-width: 768px) {
       width: 130px;
       height: 70px;
+      margin-inline: auto;
     }
   }
 
@@ -57,7 +58,7 @@ const LoginComponentStyled = styled.div`
     font-weight: normal;
 
     @media (max-width: 768px) {
-      font-size: 23px;
+      font-size: 16px;
     }
   }
 
@@ -166,6 +167,46 @@ const LoginComponentStyled = styled.div`
   }
 `;
 
+const SavePasswordSection = styled.div`
+  input[type="checkbox"] {
+    display: none; // Oculta el checkbox original
+  }
+
+  label {
+    position: relative;
+    padding-left: 30px; // Ajusta este valor según tus necesidades
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 7px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #000;
+      border-radius: 5px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 6px; // Ajusta este valor según tus necesidades
+      top: 2px; // Ajusta este valor según tus necesidades
+      width: 8px; // Ajusta este valor según tus necesidades
+      height: 16px; // Ajusta este valor según tus necesidades
+      border: solid #000; // Ajusta este valor según tus necesidades
+      border-width: 0 3px 2px 0;
+      transform: rotate(45deg);
+      display: none;
+      color: red;
+    }
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    display: block;
+  }
+`;
+
 const LOGIN_USER = gql`
   mutation TokenAuth($email: String!, $password: String!) {
     tokenAuth(email: $email, password: $password) {
@@ -236,11 +277,13 @@ const LoginComponent = () => {
           </div>
 
           <h2>¿Olvidaste tu contraseña?</h2>
-          <div className="savePasswordSection">
-            <input type="checkbox" id="myCheckbox" />
-            <label htmlfor="myCheckbox"></label>
-            <p>Guardar mis credenciales para los futuros ingresos</p>
-          </div>
+          <SavePasswordSection>
+            <div className="savePasswordSection">
+              <input type="checkbox" id="myCheckbox" />
+              <label htmlfor="myCheckbox"></label>
+              <p>Guardar mis credenciales para los futuros ingresos</p>
+            </div>
+          </SavePasswordSection>
           <button onClick={handleLogin}>Entrar</button>
           <h3>¿Aún no tienes una cuenta?</h3>
         </div>
