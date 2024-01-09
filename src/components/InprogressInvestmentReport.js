@@ -5,6 +5,10 @@ const InprogressInvestmentReportStyled = styled.div`
   .investmentReport {
     margin: 20px;
     padding: 30px;
+
+     
+
+
   }
   .bodyReport {
     background: #dbf7ff;
@@ -19,7 +23,16 @@ const InprogressInvestmentReportStyled = styled.div`
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 6px -6px #d3d7de;
-}
+      &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); // Ajusta estos valores según tus necesidades
+      transition: box-shadow 0.3s ease-in-out; // Añade una transición para suavizar el cambio
+    }
+
+
+
+
+
+  }
   }
   .columns {
     margin-top: 5px;
