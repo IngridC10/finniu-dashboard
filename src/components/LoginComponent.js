@@ -56,6 +56,7 @@ const LoginComponentStyled = styled.div`
   .login h1 {
     font-size: 32px;
     font-weight: normal;
+    padding-top: 35px;
 
     @media (max-width: 768px) {
       font-size: 16px;
@@ -91,6 +92,7 @@ const LoginComponentStyled = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
+    padding-bottom: 10px;
 
     @media (max-width: 768px) {
       font-size: 12px;
@@ -158,52 +160,55 @@ const LoginComponentStyled = styled.div`
   }
 
   .savePasswordSection input {
-    width: 30px;
-    height: 22px;
-    border-radius: 15px;
-    border: 1px solid #0d3a5c;
-    margin-top: 15px;
-    color: red;
-  }
-`;
-
-const SavePasswordSection = styled.div`
-  input[type="checkbox"] {
-    display: none; // Oculta el checkbox original
-  }
-
-  label {
-    position: relative;
-    padding-left: 30px; // Ajusta este valor según tus necesidades
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
     cursor: pointer;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      right: 7px;
-      width: 16px;
-      height: 16px;
-      border: 1px solid #000;
-      border-radius: 5px;
-    }
+  .savePasswordSection label {
+    position: relative;
+    cursor: pointer;
+    padding-right: 10px;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 6px; // Ajusta este valor según tus necesidades
-      top: 2px; // Ajusta este valor según tus necesidades
-      width: 8px; // Ajusta este valor según tus necesidades
-      height: 16px; // Ajusta este valor según tus necesidades
-      border: solid #000; // Ajusta este valor según tus necesidades
-      border-width: 0 3px 2px 0;
-      transform: rotate(45deg);
-      display: none;
-      color: red;
+  .savePasswordSection label:before {
+    content: "";
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid black;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+    @media (max-width: 768px) {
+      padding: 9px;
     }
   }
 
-  input[type="checkbox"]:checked + label::after {
+  .savePasswordSection input:checked + label:after {
+    content: "";
     display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    @media (max-width: 768px) {
+      top: 3px;
+      left: 8px;
+    }
   }
 `;
 
@@ -277,13 +282,13 @@ const LoginComponent = () => {
           </div>
 
           <h2>¿Olvidaste tu contraseña?</h2>
-          <SavePasswordSection>
-            <div className="savePasswordSection">
-              <input type="checkbox" id="myCheckbox" />
-              <label htmlfor="myCheckbox"></label>
-              <p>Guardar mis credenciales para los futuros ingresos</p>
-            </div>
-          </SavePasswordSection>
+
+          <div className="savePasswordSection">
+            <input type="checkbox" id="myCheckbox" />
+            <label htmlFor="myCheckbox"></label>
+            <p>Guardar mis credenciales para los futuros ingresos</p>
+          </div>
+
           <button onClick={handleLogin}>Entrar</button>
           <h3>¿Aún no tienes una cuenta?</h3>
         </div>
