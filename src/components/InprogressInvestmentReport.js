@@ -8,17 +8,20 @@ const InprogressInvestmentReportStyled = styled.div`
   }
   .bodyReport {
     background: #dbf7ff;
+    padding: 10px;
     border-radius: 20px;
     width: 598px;
     height: 263px;
-    align-items: center;
+    align-items: left;
     color: rgba(13, 58, 92, 1);
     font-size: 24px;
     display: flex;
     flex-direction: column;
   }
   .columns {
-    padding: 20px;
+    margin-top: 5px;
+    padding-left: 25px;
+    padding-top: 15px;
     display: flex;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -57,6 +60,13 @@ const InprogressInvestmentReportStyled = styled.div`
     font-weight: normal;
     font-size: 36px;
   }
+  .bodyReportColumn3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 18px;
+  }
 
   .bodyReportRow {
     padding: 13px;
@@ -69,12 +79,14 @@ const InprogressInvestmentReportStyled = styled.div`
     font-weight: bold;
   }
   .line {
-    height: 130px;
-    border-right: 5px solid;
+    height: 120px;
+    border: 2px solid;
     color: #a2e6fa;
-    width: 40px;
+    width: 0px;
     margin-top: 22px;
-    border-radius: 3px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 20px;
   }
 `;
 
