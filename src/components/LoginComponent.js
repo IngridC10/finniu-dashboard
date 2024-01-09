@@ -27,7 +27,7 @@ const LoginComponentStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+   
 
   .login {
     display: flex;
@@ -72,6 +72,7 @@ const LoginComponentStyled = styled.div`
   .login h3 {
     font-size: 24px;
     font-weight: normal;
+    padding-top:20px;
   }
   .login button {
     width: 184px;
@@ -113,6 +114,13 @@ const LoginComponentStyled = styled.div`
   }
  
 
+  @media (max-width: 375px) {
+    &.bodyLogin {
+      .container {
+        width: 100%; // Ajusta este valor según tus necesidades
+      }
+    }
+  }
 `;
 
 const LOGIN_USER = gql`
