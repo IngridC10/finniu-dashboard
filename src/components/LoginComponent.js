@@ -15,7 +15,7 @@ const LoginComponentStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+  }
 
   .container {
     margin: auto;
@@ -27,7 +27,12 @@ const LoginComponentStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+
+    @media (max-width: 768px) {
+      width: 370px;
+      height: 500px;
+    }
+  }
 
   .login {
     display: flex;
@@ -39,6 +44,11 @@ const LoginComponentStyled = styled.div`
     height: 127px;
     align-self: center;
     margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+      width: 130px;
+      height: 70px;
+    }
   }
 
   .login h1 {
@@ -50,8 +60,6 @@ const LoginComponentStyled = styled.div`
     font-size: 22px;
   }
 
- 
-
   .login input {
     margin: 15px;
     align-self: center;
@@ -61,7 +69,13 @@ const LoginComponentStyled = styled.div`
     border-radius: 26px;
     border: 1.9px solid rgba(162, 230, 250, 1);
     margin-top: 35px;
+
+    @media (max-width: 768px) {
+      width: 220px;
+      height: 30px;
+    }
   }
+
   .login h2 {
     font-size: 16px;
     font-weight: normal;
@@ -69,11 +83,13 @@ const LoginComponentStyled = styled.div`
     justify-content: flex-end;
     margin-right: 25px;
   }
+
   .login h3 {
     font-size: 24px;
     font-weight: normal;
-    padding-top:20px;
+    padding-top: 20px;
   }
+
   .login button {
     width: 184px;
     height: 48px;
@@ -93,7 +109,6 @@ const LoginComponentStyled = styled.div`
   }
 
   .savePasswordSection {
-    gap: 3%;
     font-size: 16px;
     display: flex;
     flex-direction: row;
@@ -103,27 +118,15 @@ const LoginComponentStyled = styled.div`
     margin-left: 25px;
   }
 
-  .savePasswordSection input{
+  .savePasswordSection input {
     width: 30px;
     height: 22px;
     border-radius: 15px;
-    border: 1px solid #0D3A5C;
-    margin-top:15px;
-    color: #0D3A5C;
-
-  }
-
- 
-
-  @media (max-width: 375px) {
-    &.bodyLogin {
-      .container {
-        width: 100%; // Ajusta este valor según tus necesidades
-      }
-    }
+    border: 1px solid #0d3a5c;
+    margin-top: 15px;
+    color: red;
   }
 `;
-
 const LOGIN_USER = gql`
   mutation TokenAuth($email: String!, $password: String!) {
     tokenAuth(email: $email, password: $password) {
