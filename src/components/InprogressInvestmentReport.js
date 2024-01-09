@@ -14,44 +14,66 @@ const InprogressInvestmentReportStyled = styled.div`
     align-items: center;
     color: rgba(13, 58, 92, 1);
     font-size: 24px;
+    display: flex;
+    flex-direction: column;
   }
   .columns {
+    padding: 20px;
     display: flex;
     grid-template-columns: 1fr 1fr 1fr;
   }
   .bodyReportColumn1 {
-    font-size: 36px;
-    font-weight: bold;
     display: flex;
     flex-direction: row;
     flex-flow: column;
     row-gap: 13px;
+  }
+  .bodyReportColumn1 h2 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .bodyReportColumn1 h4 {
+    font-size: 36px;
+    font-weight: normal;
+  }
+  .bodyReportColumn1 h1 {
+    font-weight: bold;
+    font-size: 36px;
   }
 
-  .bodyReportColumn3 {
+  .bodyReportColumn3 h3 {
     display: flex;
     flex-direction: row;
     flex-flow: column;
     row-gap: 13px;
+    font-size: 16px;
   }
-  .bodyReportColumn3 h3 {
+
+  .bodyReportColumn3 h2 {
+    font-size: 16px;
     font-weight: normal;
+  }
+  .columns h3 {
+    font-weight: normal;
+    font-size: 36px;
   }
 
   .bodyReportRow {
+    padding: 13px;
     text-align: left;
-    font-size: 24px;
   }
   .bodyReportRow h1 {
     font-weight: normal;
     padding-left: 18px;
+    font-size: 24px;
+    font-weight: bold;
   }
   .line {
     height: 130px;
     border-right: 5px solid;
     color: #a2e6fa;
     width: 40px;
-    margin-top: 40px;
+    margin-top: 22px;
     border-radius: 3px;
   }
 `;
@@ -67,12 +89,14 @@ const InprogressInvestmentReport = () => {
           <div className="columns">
             <div className="bodyReportColumn1">
               <div>
-                <h3> s/3318.5</h3>
+                <h1> s/3318.5</h1>
               </div>
               <div style={{ fontSize: "16px", fontWeight: "normal" }}>
-                <h3>Dinero inicial</h3>
+                <h2>Dinero inicial</h2>
               </div>
-              <div style={{ fontWeight: "normal" }}>s/3000</div>
+              <div>
+                <h4>s/3000</h4>
+              </div>
             </div>
 
             <div className="bodyReportColumn2">
@@ -87,7 +111,7 @@ const InprogressInvestmentReport = () => {
                   fontWeight: "normal",
                 }}
               >
-                <h3>Total intereses generados</h3>
+                <h2>Total intereses generados</h2>
               </div>
               <div
                 style={{
