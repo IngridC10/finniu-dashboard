@@ -103,15 +103,16 @@ const LoginComponentStyled = styled.div`
     margin-left: 25px;
   }
 
-  span {
-    color: white;
-    border: 2px solid black;
-    border-radius: 13%;
-    font-size: 20px;
-    width: 16px;
-    height: 18px;
-  
+  .savePasswordSection input{
+    width: 30px;
+    height: 22px;
+    border-radius: 15px;
+    border: 1px solid #0D3A5C;
+    margin-top:15px;
+    color: #0D3A5C;
+
   }
+
  
 
   @media (max-width: 375px) {
@@ -196,9 +197,8 @@ const LoginComponent = () => {
 
           <h2>¿Olvidaste tu contraseña?</h2>
           <div className="savePasswordSection">
-            <span>
-              <FontAwesomeIcon icon={faSquare} />
-            </span>
+            <input type="checkbox" id="myCheckbox" />
+            <label htmlfor="myCheckbox"></label>
             <p>Guardar mis credenciales para los futuros ingresos</p>
           </div>
           <button onClick={handleLogin}>Entrar</button>
