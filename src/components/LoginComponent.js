@@ -29,8 +29,9 @@ const LoginComponentStyled = styled.div`
     align-items: center;
 
     @media (max-width: 768px) {
-      width: 370px;
+      width: 340px;
       height: 500px;
+      border-radius: 30px;
     }
   }
 
@@ -54,6 +55,10 @@ const LoginComponentStyled = styled.div`
   .login h1 {
     font-size: 32px;
     font-weight: normal;
+
+    @media (max-width: 768px) {
+      font-size: 23px;
+    }
   }
 
   input {
@@ -69,10 +74,13 @@ const LoginComponentStyled = styled.div`
     border-radius: 26px;
     border: 1.9px solid rgba(162, 230, 250, 1);
     margin-top: 35px;
+    font-size: 20px;
 
     @media (max-width: 768px) {
       width: 220px;
       height: 30px;
+      font-size: 13px;
+      margin-top: 17px;
     }
   }
 
@@ -82,12 +90,21 @@ const LoginComponentStyled = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      margin-right: 12px;
+    }
   }
 
   .login h3 {
     font-size: 24px;
     font-weight: normal;
     padding-top: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .login button {
@@ -99,6 +116,12 @@ const LoginComponentStyled = styled.div`
     font-weight: bold;
     font-size: 18px;
     align-self: center;
+
+    @media (max-width: 768px) {
+      width: 120px;
+      height: 30px;
+      font-size: 13px;
+    }
   }
 
   .password {
@@ -116,6 +139,21 @@ const LoginComponentStyled = styled.div`
     justify-content: flex-start;
     margin-bottom: 20px;
     margin-left: 25px;
+
+    @media (max-width: 768px) {
+      font-size: 9px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+  }
+
+  .icon svg {
+    @media (max-width: 768px) {
+      margin-left: -58px !important;
+      margin-bottom: 4px !important;
+      padding-top: 12px !important;
+      height: 15px !important;
+    }
   }
 
   .savePasswordSection input {
@@ -127,6 +165,7 @@ const LoginComponentStyled = styled.div`
     color: red;
   }
 `;
+
 const LOGIN_USER = gql`
   mutation TokenAuth($email: String!, $password: String!) {
     tokenAuth(email: $email, password: $password) {
@@ -168,7 +207,6 @@ const LoginComponent = () => {
           <img src={LogoFinniu} alt="logo" />
           <h1>Hola, ingresa a tu cuenta</h1>
           <input
-            style={{ fontSize: "20px" }}
             type="text"
             placeholder="Correo electrónico"
             value={email}
@@ -176,7 +214,6 @@ const LoginComponent = () => {
           />
           <div className="password">
             <input
-              style={{ fontSize: "20px" }}
               type={showPassword ? "text" : "password"}
               placeholder="Contraseña"
               value={password}
