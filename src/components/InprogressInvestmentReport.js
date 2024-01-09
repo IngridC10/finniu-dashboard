@@ -8,7 +8,8 @@ const InprogressInvestmentReportStyled = styled.div`
   }
   .bodyReport {
     background: #dbf7ff;
-    padding: 10px;
+    padding-left: 15px;
+    padding-top:20px;
     border-radius: 20px;
     width: 598px;
     height: 263px;
@@ -17,6 +18,8 @@ const InprogressInvestmentReportStyled = styled.div`
     font-size: 24px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 8px 6px -6px #d3d7de;
+}
   }
   .columns {
     margin-top: 5px;
@@ -30,6 +33,8 @@ const InprogressInvestmentReportStyled = styled.div`
     flex-direction: row;
     flex-flow: column;
     row-gap: 13px;
+    align-items: start;
+     
   }
   .bodyReportColumn1 h2 {
     font-size: 16px;
@@ -82,7 +87,7 @@ const InprogressInvestmentReportStyled = styled.div`
     height: 120px;
     border: 2px solid;
     color: #a2e6fa;
-    width: 0px;
+    width: 0.34px;
     margin-top: 22px;
     border-radius: 10px;
     margin-top: 40px;
